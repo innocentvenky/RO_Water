@@ -1,0 +1,1348 @@
+{
+	"info": {
+		"_postman_id": "6d4687e8-1dfb-4b91-8cf8-61c944b0df4b",
+		"name": "R&O_water",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34284362"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n \"email\":\"venkatesh123@gmail.com\",\r\n \"password\":\"Venky@123\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"first_name\":\"Innocent\",\r\n\"last_name\":\"Venky\",\r\n \"email\":\"venkatesh123@gmail.com\",\r\n \"phone_number\":\"6304241542\",\r\n \"password\":\"Venky@123\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user_create/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user_create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user_update",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5NTg4NDIyLCJpYXQiOjE3MTk1MDIwMjIsImp0aSI6Ijg5YmQ2YzgyNzcwNTRiZTFhZTFmZWZlODA5NTA2YTI1IiwidXNlcl9pZCI6IjJmZTM0Mjg4LTZjN2UtNGNkNS05NDkwLTI4ZWE4ZDA3NjkwOSJ9.0QVm6qH4fpJQKwtUgI5caHsPUJU9bgWVLF4yKMZkn3g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"is_superuser\": true,\r\n \"first_name\":\"lovely\",\r\n \"last_name\":\"Venkateshbabu\", \r\n \"email\":\"venky@gmail.com\",\r\n \"phone_number\":\"6304241542\",\r\n \"password\":\"Venky123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user_update/2fe34288-6c7e-4cd5-9490-28ea8d076909",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user_update",
+						"2fe34288-6c7e-4cd5-9490-28ea8d076909"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5NTg4NDIyLCJpYXQiOjE3MTk1MDIwMjIsImp0aSI6Ijg5YmQ2YzgyNzcwNTRiZTFhZTFmZWZlODA5NTA2YTI1IiwidXNlcl9pZCI6IjJmZTM0Mjg4LTZjN2UtNGNkNS05NDkwLTI4ZWE4ZDA3NjkwOSJ9.0QVm6qH4fpJQKwtUgI5caHsPUJU9bgWVLF4yKMZkn3g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user_get/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user_get",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5NjU3MjQ1LCJpYXQiOjE3MTk1NzA4NDUsImp0aSI6IjkwMGQ2MWY4ZjU3YzQyZmE5NDA3NTY3NmE3NjdkODhmIiwidXNlcl9pZCI6IjY3YTkzZTJlLTc0ZWEtNDU2NC1hN2IyLTIxMjE5MmE1MWEzYiJ9.U9T2udXkVvNTULOGHPZdkkMyLLlvxRRM7vk_JzqhOIM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "67a93e2e-74ea-4564-a7b2-212192a51a3b",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "postman-cloud:///1ef32ff4-2cd8-4830-8f92-666d5f46193d"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/image/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"image",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "image_update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5OTEyOTE4LCJpYXQiOjE3MTk4MjY1MTgsImp0aSI6IjZlYWVjNzc2YjBhNTRhMzdhNTAwNzk1NDdhZTRmNTZkIiwidXNlcl9pZCI6IjY3YTkzZTJlLTc0ZWEtNDU2NC1hN2IyLTIxMjE5MmE1MWEzYiJ9.E2XWXsXlbHOuquSeAzX1nGzlGlIFE6vq3CqsUh4mZrs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "f718b85a-2032-4a96-ac69-f757ac364b92",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": "postman-cloud:///1ef32f5b-75e4-4680-b414-2f831dc6813b"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/image_update/564bf9d1-1e47-4512-935d-304a6450ce39",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"image_update",
+						"564bf9d1-1e47-4512-935d-304a6450ce39"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "image_get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5NTg4NDIyLCJpYXQiOjE3MTk1MDIwMjIsImp0aSI6Ijg5YmQ2YzgyNzcwNTRiZTFhZTFmZWZlODA5NTA2YTI1IiwidXNlcl9pZCI6IjJmZTM0Mjg4LTZjN2UtNGNkNS05NDkwLTI4ZWE4ZDA3NjkwOSJ9.0QVm6qH4fpJQKwtUgI5caHsPUJU9bgWVLF4yKMZkn3g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/admin",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "purifier_model",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "model_name",
+							"value": "ABCD",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "postman-cloud:///1ef32ff4-2cd8-4830-8f92-666d5f46193d"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/purifier_model/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"purifier_model",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "purifier_model_update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5OTEyOTE4LCJpYXQiOjE3MTk4MjY1MTgsImp0aSI6IjZlYWVjNzc2YjBhNTRhMzdhNTAwNzk1NDdhZTRmNTZkIiwidXNlcl9pZCI6IjY3YTkzZTJlLTc0ZWEtNDU2NC1hN2IyLTIxMjE5MmE1MWEzYiJ9.E2XWXsXlbHOuquSeAzX1nGzlGlIFE6vq3CqsUh4mZrs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "model_name",
+							"value": "ABCDefg",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "postman-cloud:///1ef32ff4-2cd8-4830-8f92-666d5f46193d"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/purifier_model_upadate/e73b0982-b203-40a1-a078-5a147e67ec0b",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"purifier_model_upadate",
+						"e73b0982-b203-40a1-a078-5a147e67ec0b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "purifier_model_get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/purifier_model_get/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"purifier_model_get",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete purifier_model",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/purifier_model_delete/91ea9dcb-ae29-419c-9de6-0376243eef09",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"purifier_model_delete",
+						"91ea9dcb-ae29-419c-9de6-0376243eef09"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Address",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5OTEyOTE4LCJpYXQiOjE3MTk4MjY1MTgsImp0aSI6IjZlYWVjNzc2YjBhNTRhMzdhNTAwNzk1NDdhZTRmNTZkIiwidXNlcl9pZCI6IjY3YTkzZTJlLTc0ZWEtNDU2NC1hN2IyLTIxMjE5MmE1MWEzYiJ9.E2XWXsXlbHOuquSeAzX1nGzlGlIFE6vq3CqsUh4mZrs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"building_name\":\"1234\",\r\n    \"area\":\"blr\",\r\n    \"nearby\":\"komi_1234\",\r\n    \"city\":\"blr\",\r\n    \"state\":\"KA\",\r\n    \"pincode\":\"123456\",\r\n    \"user_id\":\"d6256252-4ee5-4dea-ac9d-41688325ad15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/address/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"address",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Address_upadte",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5OTEyOTE4LCJpYXQiOjE3MTk4MjY1MTgsImp0aSI6IjZlYWVjNzc2YjBhNTRhMzdhNTAwNzk1NDdhZTRmNTZkIiwidXNlcl9pZCI6IjY3YTkzZTJlLTc0ZWEtNDU2NC1hN2IyLTIxMjE5MmE1MWEzYiJ9.E2XWXsXlbHOuquSeAzX1nGzlGlIFE6vq3CqsUh4mZrs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"building_name\":\"1234\",\r\n    \"area\":\"blr\",\r\n    \"nearby\":\"komi_1234\",\r\n    \"city\":\"blr\",\r\n    \"state\":\"KA\",\r\n    \"pincode\":\"123456\",\r\n    \"user_id\":\"d6256252-4ee5-4dea-ac9d-41688325ad15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/address/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"address",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Address_get",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5OTEyOTE4LCJpYXQiOjE3MTk4MjY1MTgsImp0aSI6IjZlYWVjNzc2YjBhNTRhMzdhNTAwNzk1NDdhZTRmNTZkIiwidXNlcl9pZCI6IjY3YTkzZTJlLTc0ZWEtNDU2NC1hN2IyLTIxMjE5MmE1MWEzYiJ9.E2XWXsXlbHOuquSeAzX1nGzlGlIFE6vq3CqsUh4mZrs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/address_get/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"address_get",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_Address_id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5OTEyOTE4LCJpYXQiOjE3MTk4MjY1MTgsImp0aSI6IjZlYWVjNzc2YjBhNTRhMzdhNTAwNzk1NDdhZTRmNTZkIiwidXNlcl9pZCI6IjY3YTkzZTJlLTc0ZWEtNDU2NC1hN2IyLTIxMjE5MmE1MWEzYiJ9.E2XWXsXlbHOuquSeAzX1nGzlGlIFE6vq3CqsUh4mZrs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/address_get_id/67a93e2e-74ea-4564-a7b2-212192a51a3b",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"address_get_id",
+						"67a93e2e-74ea-4564-a7b2-212192a51a3b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Purifier_details_create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5OTEyOTE4LCJpYXQiOjE3MTk4MjY1MTgsImp0aSI6IjZlYWVjNzc2YjBhNTRhMzdhNTAwNzk1NDdhZTRmNTZkIiwidXNlcl9pZCI6IjY3YTkzZTJlLTc0ZWEtNDU2NC1hN2IyLTIxMjE5MmE1MWEzYiJ9.E2XWXsXlbHOuquSeAzX1nGzlGlIFE6vq3CqsUh4mZrs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "postman-cloud:///1ef32ff4-2cd8-4830-8f92-666d5f46193d"
+						},
+						{
+							"key": "capacity",
+							"value": "10Ltrs",
+							"type": "text"
+						},
+						{
+							"key": "color",
+							"value": "Bule",
+							"type": "text"
+						},
+						{
+							"key": "purification_features",
+							"value": "All",
+							"type": "text"
+						},
+						{
+							"key": "installation_type",
+							"value": "wal",
+							"type": "text"
+						},
+						{
+							"key": "filtration_capacity",
+							"value": "10lits/hr",
+							"type": "text"
+						},
+						{
+							"key": "power_requirement",
+							"value": "20v",
+							"type": "text"
+						},
+						{
+							"key": "purification_technology",
+							"value": "Ind",
+							"type": "text"
+						},
+						{
+							"key": "width",
+							"value": "20cm",
+							"type": "text"
+						},
+						{
+							"key": "height",
+							"value": "40cm",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "10kg",
+							"type": "text"
+						},
+						{
+							"key": "warranty_summary",
+							"value": "1year",
+							"type": "text"
+						},
+						{
+							"key": "domestic_warranty",
+							"value": "1year",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "5000.00",
+							"type": "text"
+						},
+						{
+							"key": "depth",
+							"value": "10cm",
+							"type": "text"
+						},
+						{
+							"key": "warranty_service_type",
+							"value": "None",
+							"type": "text"
+						},
+						{
+							"key": "purifiermodel_id",
+							"value": "e73b0982-b203-40a1-a078-5a147e67ec0b",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/purifier_details_create/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"purifier_details_create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Purifier_details_update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5OTEyOTE4LCJpYXQiOjE3MTk4MjY1MTgsImp0aSI6IjZlYWVjNzc2YjBhNTRhMzdhNTAwNzk1NDdhZTRmNTZkIiwidXNlcl9pZCI6IjY3YTkzZTJlLTc0ZWEtNDU2NC1hN2IyLTIxMjE5MmE1MWEzYiJ9.E2XWXsXlbHOuquSeAzX1nGzlGlIFE6vq3CqsUh4mZrs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "postman-cloud:///1ef32ff4-2cd8-4830-8f92-666d5f46193d"
+						},
+						{
+							"key": "capacity",
+							"value": "15Ltrs",
+							"type": "text"
+						},
+						{
+							"key": "color",
+							"value": "white",
+							"type": "text"
+						},
+						{
+							"key": "purification_features",
+							"value": "All",
+							"type": "text"
+						},
+						{
+							"key": "installation_type",
+							"value": "wal",
+							"type": "text"
+						},
+						{
+							"key": "filtration_capacity",
+							"value": "15lits/hr",
+							"type": "text"
+						},
+						{
+							"key": "power_requirement",
+							"value": "20v",
+							"type": "text"
+						},
+						{
+							"key": "purification_technology",
+							"value": "Ind",
+							"type": "text"
+						},
+						{
+							"key": "width",
+							"value": "20cm",
+							"type": "text"
+						},
+						{
+							"key": "height",
+							"value": "40cm",
+							"type": "text"
+						},
+						{
+							"key": "weight",
+							"value": "10kg",
+							"type": "text"
+						},
+						{
+							"key": "warranty_summary",
+							"value": "1year",
+							"type": "text"
+						},
+						{
+							"key": "domestic_warranty",
+							"value": "1year",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "8000.00",
+							"type": "text"
+						},
+						{
+							"key": "depth",
+							"value": "10cm",
+							"type": "text"
+						},
+						{
+							"key": "warranty_service_type",
+							"value": "None",
+							"type": "text"
+						},
+						{
+							"key": "purifiermodel_id",
+							"value": "e73b0982-b203-40a1-a078-5a147e67ec0b",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/purifier_details_update/9bc956c0-bc71-4f9c-8939-753b3958e21c",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"purifier_details_update",
+						"9bc956c0-bc71-4f9c-8939-753b3958e21c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "purifier_details_get",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5OTEyOTE4LCJpYXQiOjE3MTk4MjY1MTgsImp0aSI6IjZlYWVjNzc2YjBhNTRhMzdhNTAwNzk1NDdhZTRmNTZkIiwidXNlcl9pZCI6IjY3YTkzZTJlLTc0ZWEtNDU2NC1hN2IyLTIxMjE5MmE1MWEzYiJ9.E2XWXsXlbHOuquSeAzX1nGzlGlIFE6vq3CqsUh4mZrs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/purifier_details_get/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"purifier_details_get",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "purifier_details_delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5OTEyOTE4LCJpYXQiOjE3MTk4MjY1MTgsImp0aSI6IjZlYWVjNzc2YjBhNTRhMzdhNTAwNzk1NDdhZTRmNTZkIiwidXNlcl9pZCI6IjY3YTkzZTJlLTc0ZWEtNDU2NC1hN2IyLTIxMjE5MmE1MWEzYiJ9.E2XWXsXlbHOuquSeAzX1nGzlGlIFE6vq3CqsUh4mZrs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/purifier_details_delete/0da90755-c13e-4add-9967-1f2e907d007e",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"purifier_details_delete",
+						"0da90755-c13e-4add-9967-1f2e907d007e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Feedback_create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5OTEyOTE4LCJpYXQiOjE3MTk4MjY1MTgsImp0aSI6IjZlYWVjNzc2YjBhNTRhMzdhNTAwNzk1NDdhZTRmNTZkIiwidXNlcl9pZCI6IjY3YTkzZTJlLTc0ZWEtNDU2NC1hN2IyLTIxMjE5MmE1MWEzYiJ9.E2XWXsXlbHOuquSeAzX1nGzlGlIFE6vq3CqsUh4mZrs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Image",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Image",
+							"type": "file",
+							"src": "postman-cloud:///1ef32f5b-75e4-4680-b414-2f831dc6813b"
+						},
+						{
+							"key": "feedback",
+							"value": "very very good",
+							"type": "text"
+						},
+						{
+							"key": "rating",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/feedback_create/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"feedback_create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Feedback_create_update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5OTEyOTE4LCJpYXQiOjE3MTk4MjY1MTgsImp0aSI6IjZlYWVjNzc2YjBhNTRhMzdhNTAwNzk1NDdhZTRmNTZkIiwidXNlcl9pZCI6IjY3YTkzZTJlLTc0ZWEtNDU2NC1hN2IyLTIxMjE5MmE1MWEzYiJ9.E2XWXsXlbHOuquSeAzX1nGzlGlIFE6vq3CqsUh4mZrs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Image",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Image",
+							"type": "file",
+							"src": "postman-cloud:///1ef32f5b-75e4-4680-b414-2f831dc6813b"
+						},
+						{
+							"key": "feedback",
+							"value": "very very good",
+							"type": "text"
+						},
+						{
+							"key": "rating",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/feedback_update/dac0bfbe-a5dc-43f5-aa85-fa9df6817d52",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"feedback_update",
+						"dac0bfbe-a5dc-43f5-aa85-fa9df6817d52"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Feedback_get",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5OTEyOTE4LCJpYXQiOjE3MTk4MjY1MTgsImp0aSI6IjZlYWVjNzc2YjBhNTRhMzdhNTAwNzk1NDdhZTRmNTZkIiwidXNlcl9pZCI6IjY3YTkzZTJlLTc0ZWEtNDU2NC1hN2IyLTIxMjE5MmE1MWEzYiJ9.E2XWXsXlbHOuquSeAzX1nGzlGlIFE6vq3CqsUh4mZrs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/feedback_get/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"feedback_get",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Feedback_delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5OTEyOTE4LCJpYXQiOjE3MTk4MjY1MTgsImp0aSI6IjZlYWVjNzc2YjBhNTRhMzdhNTAwNzk1NDdhZTRmNTZkIiwidXNlcl9pZCI6IjY3YTkzZTJlLTc0ZWEtNDU2NC1hN2IyLTIxMjE5MmE1MWEzYiJ9.E2XWXsXlbHOuquSeAzX1nGzlGlIFE6vq3CqsUh4mZrs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/feedback_delete/dac0bfbe-a5dc-43f5-aa85-fa9df6817d52",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"feedback_delete",
+						"dac0bfbe-a5dc-43f5-aa85-fa9df6817d52"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Biil_generate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5OTEyOTE4LCJpYXQiOjE3MTk4MjY1MTgsImp0aSI6IjZlYWVjNzc2YjBhNTRhMzdhNTAwNzk1NDdhZTRmNTZkIiwidXNlcl9pZCI6IjY3YTkzZTJlLTc0ZWEtNDU2NC1hN2IyLTIxMjE5MmE1MWEzYiJ9.E2XWXsXlbHOuquSeAzX1nGzlGlIFE6vq3CqsUh4mZrs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CGST\":0.5,\r\n    \"SGST\":0.2,\r\n    \"purifierdetails_id\":\"9cbff56c-a495-4317-85e9-092f0b1a7add\",\r\n    \"user_id\":\"d6256252-4ee5-4dea-ac9d-41688325ad15\"\r\n  \r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/bill_generate/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bill_generate",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bill_get",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5OTEyOTE4LCJpYXQiOjE3MTk4MjY1MTgsImp0aSI6IjZlYWVjNzc2YjBhNTRhMzdhNTAwNzk1NDdhZTRmNTZkIiwidXNlcl9pZCI6IjY3YTkzZTJlLTc0ZWEtNDU2NC1hN2IyLTIxMjE5MmE1MWEzYiJ9.E2XWXsXlbHOuquSeAzX1nGzlGlIFE6vq3CqsUh4mZrs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/bill_get/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"bill_get",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "service",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5OTEyOTE4LCJpYXQiOjE3MTk4MjY1MTgsImp0aSI6IjZlYWVjNzc2YjBhNTRhMzdhNTAwNzk1NDdhZTRmNTZkIiwidXNlcl9pZCI6IjY3YTkzZTJlLTc0ZWEtNDU2NC1hN2IyLTIxMjE5MmE1MWEzYiJ9.E2XWXsXlbHOuquSeAzX1nGzlGlIFE6vq3CqsUh4mZrs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Problem",
+							"value": "issuse",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": "postman-cloud:///1ef37b6f-62aa-4460-8aad-584621504ff0"
+						},
+						{
+							"key": "user_id",
+							"value": "67a93e2e-74ea-4564-a7b2-212192a51a3b",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/serviceing/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"serviceing",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_service",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5OTEyOTE4LCJpYXQiOjE3MTk4MjY1MTgsImp0aSI6IjZlYWVjNzc2YjBhNTRhMzdhNTAwNzk1NDdhZTRmNTZkIiwidXNlcl9pZCI6IjY3YTkzZTJlLTc0ZWEtNDU2NC1hN2IyLTIxMjE5MmE1MWEzYiJ9.E2XWXsXlbHOuquSeAzX1nGzlGlIFE6vq3CqsUh4mZrs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Problem",
+							"value": "issuse",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"type": "file",
+							"src": "postman-cloud:///1ef37b6f-62aa-4460-8aad-584621504ff0"
+						},
+						{
+							"key": "user_id",
+							"value": "67a93e2e-74ea-4564-a7b2-212192a51a3b",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "activate",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/update_service/ffadb479-26ab-4910-ab46-bacc7f918f8b",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"update_service",
+						"ffadb479-26ab-4910-ab46-bacc7f918f8b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_service",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5OTEyOTE4LCJpYXQiOjE3MTk4MjY1MTgsImp0aSI6IjZlYWVjNzc2YjBhNTRhMzdhNTAwNzk1NDdhZTRmNTZkIiwidXNlcl9pZCI6IjY3YTkzZTJlLTc0ZWEtNDU2NC1hN2IyLTIxMjE5MmE1MWEzYiJ9.E2XWXsXlbHOuquSeAzX1nGzlGlIFE6vq3CqsUh4mZrs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get_service/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get_service",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_service",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5OTEyOTE4LCJpYXQiOjE3MTk4MjY1MTgsImp0aSI6IjZlYWVjNzc2YjBhNTRhMzdhNTAwNzk1NDdhZTRmNTZkIiwidXNlcl9pZCI6IjY3YTkzZTJlLTc0ZWEtNDU2NC1hN2IyLTIxMjE5MmE1MWEzYiJ9.E2XWXsXlbHOuquSeAzX1nGzlGlIFE6vq3CqsUh4mZrs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/delete_service/735947b3-d8c0-429f-a2ce-59bc9bf62ddf",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"delete_service",
+						"735947b3-d8c0-429f-a2ce-59bc9bf62ddf"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
